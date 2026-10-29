@@ -32,7 +32,27 @@ Proyecto grupal del bootcamp de **The Bridge** (Data Science y Full Stack). Part
     ├── Proyecto_BBDD_Explicado.pdf   Memoria paso a paso
     ├── Presentacion.pptx             Presentación técnica
     └── capturas/                     Capturas de los scripts, Supabase y Python
+        └── v1/                       Capturas de la primera versión del modelo
 ```
+
+## Versiones del modelo
+
+El proyecto tiene dos versiones. **La que vale es la v2**: todo lo que está fuera de las carpetas `v1/` corresponde a ella.
+
+| | v1 (primera versión) | v2 (versión final) |
+|---|---|---|
+| Tablas | 8 | 10 |
+| Personas | `alumnos` y `claustro` por separado, cada una con su nombre y email | `persona`, de la que heredan `alumnos` y `profesor` |
+| Quién corrige cada proyecto | No se guardaba | Relación Corrigen (`profesorProyecto`) |
+| Mes de la promoción | Se guardaba el año como columna | No se guarda: se calcula a partir de la fecha |
+| Dónde está | `sql/v1/`, `diagramas/v1/`, `docs/capturas/v1/` | El resto del repositorio |
+
+**Por qué la cambiamos:**
+- En la v1, si un alumno pasaba a ser profesor ayudante (TA), había que darlo de alta otra vez en el claustro y su nombre y su email quedaban repetidos. Con `persona` se guardan una sola vez.
+- Una persona puede ser alumno y profesor a la vez (herencia solapada).
+- En la v1 solo se podía suponer quién corregía cada proyecto a partir de la promoción; en la v2 se guarda.
+
+La v1 se conserva como referencia de cómo evolucionó el diseño. En Supabase, sus tablas están en el esquema `public` y las de la v2 en el esquema `v2`.
 
 ## Cómo lo hicimos
 
