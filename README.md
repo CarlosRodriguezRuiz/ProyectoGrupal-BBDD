@@ -29,7 +29,7 @@ Proyecto grupal del bootcamp de **The Bridge** (Data Science y Full Stack). Part
 │   └── v1/           Scripts y consultas de la primera versión del modelo
 ├── python/           Carga alternativa de los CSV con pandas + SQLAlchemy
 └── docs/
-    ├── Proyecto_BBDD_Explicado.pdf   Memoria paso a paso (primera versión del modelo)
+    ├── Proyecto_BBDD_Explicado.pdf   Memoria paso a paso
     ├── Presentacion.pptx             Presentación técnica
     └── capturas/                     Capturas de los scripts, Supabase y Python
 ```
